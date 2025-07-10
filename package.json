@@ -7,7 +7,7 @@
     "test": "jest",
     "lint": "npx eslint src",
     "api-test": "newman run postman/suma_collection.json",
-    "start:test": "concurrently --kill-others-on-fail --success first \"node src/app.js\" \"npx newman run postman/suma_collection.json\""
+    "start:test": "node src/test-server.js"
   },
   "dependencies": {
     "express": "^4.18.2"
