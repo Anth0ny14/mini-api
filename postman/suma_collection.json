@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "Pruebas API Suma",
+    "_postman_id": "12345",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Suma 2+3",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/suma?a=2&b=3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["suma"],
+          "query": [
+            { "key": "a", "value": "2" },
+            { "key": "b", "value": "3" }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

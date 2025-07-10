@@ -27,3 +27,7 @@ jobs:
 
       - name: Ejecutar pruebas unitarias
         run: npm test
+
+      - name: Ejecutar API Tests con Newman
+        run: npm run api-test
+
