@@ -31,6 +31,13 @@ jobs:
       - name: Ejecutar API Tests con servidor
         run: npm run start:test
 
+      - name: Iniciar servidor Express en segundo plano
+        run: node src/app.js &
+
+      - name: Esperar a que el servidor esté listo
+        run: npx wait-on http://localhost:3000
+
       - name: Ejecutar pruebas de interfaz con Cypress
         run: npm run cypress:run
+      
 
