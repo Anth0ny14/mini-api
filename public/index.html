@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Suma</title>
+</head>
+<body>
+  <h1>Suma de números</h1>
+  <input id="a" type="number" placeholder="Número A" />
+  <input id="b" type="number" placeholder="Número B" />
+  <button onclick="calcular()">Sumar</button>
+  <p id="resultado"></p>
+
+  <script>
+    async function calcular() {
+      const a = document.getElementById('a').value;
+      const b = document.getElementById('b').value;
+      const res = await fetch(`/suma?a=${a}&b=${b}`);
+      const data = await res.json();
+      document.getElementById('resultado').innerText = 'Resultado: ' + data.resultado;
+    }
+  </script>
+</body>
+</html>

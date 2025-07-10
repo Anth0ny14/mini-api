@@ -31,3 +31,6 @@ jobs:
       - name: Ejecutar API Tests con servidor
         run: npm run start:test
 
+      - name: Ejecutar pruebas de interfaz con Cypress
+        run: npm run cypress:run
+
